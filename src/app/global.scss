@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+  scroll-behavior: smooth;
+}
+
+html {
+  --roboto: "Roboto", sans-serif;
+  --roboto-condensed: "Roboto Condensed", "Arial Narrow", sans-serif;
+  --roboto-mono: "Roboto Mono", monospace;
+
+  --acent: rgb(111, 206, 191, 0.8);
+  --primary: rgb(196, 150, 84, 0.8);
+  --secondary: rgb(156, 221, 168, 0.8);
+  --tom-1: #f6EEE4;
+  --tom-2: #0B0704;
+
+  font-size: 1px;
+  font-family: var(--roboto);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--tom-1);
+}
+
+body {
+  font-size: 16rem;
+}
+
+.text-gradient {
+  width: fit-content;
+  color: transparent;
+  background: linear-gradient(90deg, var(--primary), var(--acent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+}
