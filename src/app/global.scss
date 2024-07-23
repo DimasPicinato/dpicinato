@@ -15,9 +15,9 @@ html {
   --roboto-condensed: "Roboto Condensed", "Arial Narrow", sans-serif;
   --roboto-mono: "Roboto Mono", monospace;
 
-  --acent: rgb(111, 206, 191, 0.8);
-  --primary: rgb(196, 150, 84, 0.8);
-  --secondary: rgb(156, 221, 168, 0.8);
+  --acent: #6fcebfcc;
+  --primary: #c49654cc;
+  --secondary: #9cdda8cc;
   --tom-1: #f6EEE4;
   --tom-2: #0B0704;
 
@@ -30,6 +30,10 @@ html {
 
 body {
   font-size: 16rem;
+}
+
+h1 {
+  font-size: 45rem;
 }
 
 .text-gradient {
