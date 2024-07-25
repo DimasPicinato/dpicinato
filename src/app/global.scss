@@ -15,11 +15,12 @@ html {
   --roboto-condensed: "Roboto Condensed", "Arial Narrow", sans-serif;
   --roboto-mono: "Roboto Mono", monospace;
 
-  --acent: #6fcebfcc;
-  --primary: #c49654cc;
-  --secondary: #9cdda8cc;
+  --primary: #c49654dd;
+  --secondary: #9cdda8dd;
+  --acent: #6fcec0dd;
   --tom-1: #f6EEE4;
   --tom-2: #0B0704;
+  --tom-2-50: #0b070480;
 
   font-size: 1px;
   font-family: var(--roboto);
@@ -34,6 +35,20 @@ body {
 
 h1 {
   font-size: 45rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--tom-1);
+  cursor: pointer;
+
+  * {
+    cursor: pointer;
+  }
+}
+
+hr {
+  border: 1px solid var(--tom-2-50);
 }
 
 .text-gradient {

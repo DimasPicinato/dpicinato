@@ -1,8 +1,3 @@
-@function fMin($x) {
-  $min: min(1vw, calc(1vh * 16/9));
-  @return calc($min * $x)
-}
-
 .HomePage {
   display: flex;
   flex-direction: column;
@@ -13,42 +8,30 @@
     width: calc(100% - 200rem);
 
     section:first-child {
-      height: 80vh;
-      display: grid;
-      grid-template: 1fr / 1fr 1fr;
       gap: 40rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
 
       .header {
         h1 {
-          justify-self: end;
-          text-align: end;
+          justify-self: flex-end;
           font-family: var(--roboto-condensed);
 
           span {
             font-family: var(--roboto);
           }
         }
+
       }
 
-      .siteExemplo {
-        position: relative;
-        background: white;
-        width: fMin(15.7 * 2.5);
-        height: fMin(10 * 2.5);
-        color: var(--tom-2);
-        box-shadow: inset 0 0 fMin(.5) fMin(.05) var(--tom-2);
+      .container {
+        display: flex;
+        justify-content: flex-end;
 
-        img {
-          position: absolute;
-          top: fMin(-0.7);
-          left: fMin(-5.4);
-          height: 116%;
-          pointer-events: none;
-        }
-
-        .content {
-          overflow: auto;
+        svg {
+          font-size: 50rem;
         }
       }
     }
