@@ -5,18 +5,34 @@
   height: 420rem;
   background: var(--tom-1);
   color: var(--tom-2);
-  cursor: url('/macbook/cursor.png'), auto;
+  display: grid;
+  grid-template: 1fr min-content / 1fr;
+  cursor: url('/macbook/normal.png'), auto;
 
   * {
-    cursor: url('/macbook/cursor.png'), auto;
+    cursor: url('/macbook/normal.png'), auto;
   }
 
-  img {
+  a,
+  button {
+    cursor: url('/macbook/link.png'), auto;
+
+    * {
+      cursor: url('/macbook/link.png'), auto;
+    }
+  }
+
+  svg {
+    font-size: 30rem;
+  }
+
+  >img {
     position: absolute;
     top: -2.35%;
     left: -13.72%;
     height: 116%;
     pointer-events: none;
+    z-index: 100;
   }
 
   .content {
@@ -25,24 +41,111 @@
     display: flex;
     flex-direction: column;
     text-align: justify;
-    padding: 20rem;
+    padding: 10rem;
     gap: 10rem;
 
-    &::-webkit-scrollbar {
-      width: 10rem;
-    }
-
-    &::-webkit-scrollbar-thumb {
+    .header {
+      box-shadow: 0 10rem 10rem var(--tom-2-20);
       border-radius: 10rem;
-      background: var(--tom-2-50);
+      display: grid;
+      grid-template: auto 1fr / 1fr;
+      align-items: end;
+
+      img.fundo {
+        grid-area: 1/1;
+        border-radius: 10rem 10rem 0 0;
+        width: 100%;
+        height: fit-content;
+      }
+
+      img.perfil {
+        margin: 10rem;
+        grid-area: 1/1/3/1;
+        height: 55%;
+        background: var(--tom-1);
+        padding: 5rem;
+        border-radius: 50%;
+      }
+
+      .container {
+        padding: 10rem;
+        justify-self: end;
+        grid-area: 2/1;
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+
+        a {
+          display: flex;
+
+          svg {
+            color: var(--tom-2);
+          }
+        }
+      }
     }
 
-    >* {
-      padding: 0 80rem;
+    .body {
+      padding: 20rem;
     }
+  }
+
+  &:hover {
+    .navBar {
+      animation: bottom-up .3s ease forwards;
+    }
+  }
+
+  .navBar {
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    background: var(--tom-2);
+    backdrop-filter: blur(5rem);
+    -webkit-backdrop-filter: blur(5rem);
+    animation: bottom-down .3s ease forwards;
 
     hr {
-      margin: 0 80rem;
+      border-color: var(--tom-1);
     }
+
+    >*:not(hr) {
+      display: flex;
+      padding: 5rem;
+
+      &:hover {
+        border-radius: 5rem;
+      }
+
+      svg {
+        color: var(--tom-1);
+      }
+    }
+  }
+}
+
+@keyframes bottom-up {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 40rem;
+  }
+}
+
+@keyframes bottom-down {
+  from {
+    height: 40rem;
+  }
+
+  to {
+    height: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Macbook {
+    display: none;
   }
 }

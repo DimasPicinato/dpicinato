@@ -1,6 +1,5 @@
 import Macbook from '@/components/Macbook'
 import './page.scss'
-import { IoLogoGithub, IoLogoInstagram, IoLogoLinkedin } from "react-icons/io"
 
 export default function HomePage() {
   return <body className='HomePage'>
@@ -13,17 +12,7 @@ export default function HomePage() {
           </h1>
         </div>
         <Macbook />
-        <div className="container">
-          <a href="https://github.com/D-Picinato" target="_blank">
-            <IoLogoGithub />
-          </a>
-          <a href="https://www.linkedin.com/in/dimas-picinato" target="_blank">
-            <IoLogoLinkedin />
-          </a>
-          <a href="https://www.instagram.com/dimas_picinato/" target="_blank">
-            <IoLogoInstagram />
-          </a>
-        </div>
+        <h1>Site em <span className='text-gradient'>construção</span>!</h1>
       </section>
     </main>
   </body>

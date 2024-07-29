@@ -21,6 +21,7 @@ html {
   --tom-1: #f6EEE4;
   --tom-2: #0B0704;
   --tom-2-50: #0b070480;
+  --tom-2-20: #0b070433;
 
   font-size: 1px;
   font-family: var(--roboto);
@@ -29,12 +30,24 @@ html {
   color: var(--tom-1);
 }
 
+@media screen and (max-width: 425px) {
+  html {
+    font-size: .23529411vw;
+  }
+}
+
 body {
   font-size: 16rem;
 }
 
 h1 {
   font-size: 45rem;
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 30rem;
+  }
 }
 
 a {
@@ -49,6 +62,18 @@ a {
 
 hr {
   border: 1px solid var(--tom-2-50);
+}
+
+button,
+.button {
+  display: flex;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  * {
+    cursor: pointer;
+  }
 }
 
 .text-gradient {

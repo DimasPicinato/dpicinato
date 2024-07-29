@@ -6,6 +6,7 @@
 
   main {
     width: calc(100% - 200rem);
+    padding: 40rem;
 
     section:first-child {
       gap: 40rem;
@@ -16,24 +17,22 @@
 
       .header {
         h1 {
-          justify-self: flex-end;
           font-family: var(--roboto-condensed);
 
           span {
             font-family: var(--roboto);
           }
         }
-
       }
+    }
+  }
+}
 
-      .container {
-        display: flex;
-        justify-content: flex-end;
-
-        svg {
-          font-size: 50rem;
-        }
-      }
+@media screen and (max-width: 1024px) {
+  .HomePage {
+    main {
+      padding: 40rem 0;
+      width: 100%;
     }
   }
 }
