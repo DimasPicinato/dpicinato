@@ -3,13 +3,14 @@
 import { useState } from 'react'
 import './index.scss'
 import { IoIosPaper, IoLogoGithub, IoLogoInstagram, IoLogoLinkedin, IoMdPaper } from 'react-icons/io'
+import Image from 'next/image'
 
 export default function Macbook() {
   const [view, setView] = useState(false)
 
   return (
     <div className="Macbook">
-      <img src="/macbook/moldura.png" alt="moldura macbook" />
+      <Image width={840} height={900} src="/macbook/moldura.png" alt="moldura macbook" />
       {view
         ? <>
           <embed src="/macbook/curriculo.pdf" type="application/pdf" width="100%" height="100%" />
