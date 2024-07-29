@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@/Theme'
+import { ThemeProvider } from '../Theme'
 import './global.scss'
 
 export default function RootLayout({ children }) {

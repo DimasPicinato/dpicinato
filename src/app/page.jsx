@@ -1,4 +1,4 @@
-import Macbook from '@/components/Macbook'
+import Macbook from '../components/Macbook'
 import './page.scss'
 
 export default function HomePage() {
