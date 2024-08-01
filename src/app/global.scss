@@ -23,6 +23,9 @@ html {
   --tom-2-50: #0b070480;
   --tom-2-20: #0b070433;
 
+  --shadow: 0 0 10rem 2.5rem var(--tom-2-20);
+  --drop-shadow: 0 10rem 10rem var(--tom-2-20);
+
   font-size: 1px;
   font-family: var(--roboto);
   -webkit-font-smoothing: antialiased;
@@ -83,4 +86,8 @@ button,
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
+}
+
+.text-small {
+  font-size: .9em;
 }
