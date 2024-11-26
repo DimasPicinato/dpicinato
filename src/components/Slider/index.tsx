@@ -1,32 +1,24 @@
 import './index.scss'
 
-import { useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import { HiOutlineChevronLeft, HiOutlineChevronRight, HiOutlineDocumentText, HiPause, HiPlay } from "react-icons/hi2"
 
 import { SiExpress, SiGithub, SiJquery, SiNextdotjs } from 'react-icons/si'
 import Slide from './Slide'
-import { Logo_DrawIo, Logo_Figma, Logo_Git, Logo_Instagram, Logo_JavaScript, Logo_Jira, Logo_LinkedIn, Logo_MariaDB, Logo_MongoDB, Logo_MySQL, Logo_NodeJS, Logo_PostgreSQL, Logo_React, Logo_Sass, Logo_TypeScript } from '@/assets/icons/Logos'
+import { Logo_DrawIo, Logo_Figma, Logo_Git, Logo_Instagram, Logo_JavaScript, Logo_Jira, Logo_LinkedIn, Logo_MariaDB, Logo_MySQL, Logo_NodeJS, Logo_React, Logo_Sass, Logo_TypeScript } from '@/assets/icons/Logos'
 
 export default function Slider({ slideWidth }: { slideWidth: number }) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [index, setIndex] = useState<number>(0)
   const [isSliding, setIsSliding] = useState<boolean>(true)
 
-  const toPreview = () => {
-    if (index <= 0) {
-      setIndex(4)
-      return
-    }
-    setIndex(index - 1)
-  }
+  const toPreview = useCallback(() => {
+    setIndex(i => (i <= 0 ? 4 : i - 1))
+  }, [])
 
-  const toNext = () => {
-    if (index >= 4) {
-      setIndex(0)
-      return
-    }
-    setIndex(index + 1)
-  }
+  const toNext = useCallback(() => {
+    setIndex(i => (i >= 4 ? 0 : i + 1))
+  }, [])
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -40,7 +32,7 @@ export default function Slider({ slideWidth }: { slideWidth: number }) {
 
       return () => clearInterval(interval)
     }
-  }, [index, isSliding])
+  }, [index, isSliding, slideWidth])
 
   return <div className="Slider">
     <div className="scroll" ref={scrollRef}>
