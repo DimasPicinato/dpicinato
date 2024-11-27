@@ -1,5 +1,4 @@
-interface SlideProps extends React.HTMLAttributes<HTMLDivElement> {
-  width: number
+export interface SlideProps extends React.HTMLAttributes<HTMLDivElement> {
   marks: string[]
   heading: React.ReactNode
   shortcuts: Shortcut[]
@@ -13,8 +12,8 @@ interface Shortcut {
   url?: string
 }
 
-export default function Slide({ width, marks, heading, shortcuts, description, children, className, style, ...props }: SlideProps) {
-  return <div className={'Slide' + (className ? ` ${className}` : '')} style={{ ...style, width: `${width}px` }} {...props}>
+export default function Slide({ marks, heading, shortcuts, description, children, className, ...props }: SlideProps) {
+  return <div className={'Slide' + (className ? ` ${className}` : '')} {...props}>
     <div className="content">
       <div className="marks">
         {marks.reduce<React.ReactNode[]>((acc, name, i) => {
