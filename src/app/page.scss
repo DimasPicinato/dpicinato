@@ -42,7 +42,8 @@
 
     #conhecame {
       width: 100%;
-      height: 100vh;
+      height: fit-content;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -99,6 +100,22 @@
 
     footer {
       background: black;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .HomePage {
+    header {
+      padding: 16rem 32rem;
+
+      nav {
+        display: none !important;
+      }
+    }
+
+    footer {
+      padding: 16rem;
     }
   }
 }

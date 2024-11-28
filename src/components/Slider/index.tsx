@@ -1,3 +1,5 @@
+'use client'
+
 import './index.scss'
 
 import { useCallback, useEffect, useRef, useState } from "react"
@@ -10,7 +12,7 @@ import { Logo_DrawIo, Logo_Figma, Logo_Git, Logo_Instagram, Logo_JavaScript, Log
 const slides: SlideProps[] = [
   {
     heading: <>Sou desenvolvedor <span className="text-gradient">Full Stack</span>, e construo ideias no ambiente digital.</>,
-    marks: ['Full Stack', 'Web', 'Métodos Ágeis', 'Prototipação UI/UX', 'UML'],
+    marks: ['Full Stack', 'Métodos Ágeis', 'UI/UX', 'UML'],
     shortcuts: [
       { name: 'GitHub', icon: <SiGithub />, url: 'https://github.com/D-Picinato' },
       { name: 'LinkedIn', icon: <Logo_LinkedIn />, url: 'https://www.linkedin.com/in/dimas-picinato' },
@@ -21,7 +23,7 @@ const slides: SlideProps[] = [
   },
   {
     heading: <>Tenho competência em <span className="text-gradient">Gestão, Análise e Projeto de Sistemas</span>.</>,
-    marks: ['Scrum', 'Kanban', 'Análise de Requisitos', 'Protótipação', 'UML', 'MER'],
+    marks: ['Métodos Ágeis', 'Artefatos', 'Versionamento'],
     shortcuts: [
       { name: 'Jira', icon: <Logo_Jira />, url: 'https://www.atlassian.com/software/jira' },
       { name: 'Figma', icon: <Logo_Figma />, url: 'https://www.figma.com' },
@@ -32,7 +34,7 @@ const slides: SlideProps[] = [
   },
   {
     heading: <>Sou profissional na construção de aplicações <span className="text-gradient">Front-end</span> modernas.</>,
-    marks: ['Arquitetura MVVM', 'UI/UX', 'Componentização', 'Web'],
+    marks: ['Arquitetura MVVM', 'UI/UX', 'Web'],
     shortcuts: [
       { name: 'JavaScript', icon: <Logo_JavaScript />, url: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript' },
       { name: 'TypeScript', icon: <Logo_TypeScript />, url: 'https://www.typescriptlang.org/' },
@@ -41,11 +43,11 @@ const slides: SlideProps[] = [
       { name: 'Sass/Scss', icon: <Logo_Sass />, url: 'https://sass-lang.com/' },
       { name: 'jQuery', icon: <SiJquery />, url: 'https://jquery.com/' }
     ],
-    description: 'Sou um desenvolvedor Front-end com experiência profissional desde abril de 2024, aplicando a arquitetura MVVM em meus projetos para garantir uma separação clara de responsabilidades e facilitar a manutenção do código. Estou sempre buscando aprimorar minhas habilidades e adotar as melhores práticas para construir interfaces interativas, escaláveis e eficientes.'
+    description: 'Sou desenvolvedor Front-end com experiência profissional desde abril de 2024, faço uso da arquitetura MVVM para separação de responsabilidades. Sou focado em criar interfaces interativas, escaláveis e eficientes, com constante busca por aprimoramento e melhores práticas.'
   },
   {
     heading: <>Estou me aprofundando em desenvolvimento <span className="text-gradient">Back-end</span>.</>,
-    marks: ['Arquitetura MVC', 'Microsserviços', 'SOLID', 'API RESTful'],
+    marks: ['Arquitetura MVC', 'UML', 'SOLID', 'API RESTful'],
     shortcuts: [
       { name: 'Node.js', icon: <Logo_NodeJS />, url: 'https://nodejs.org/' },
       { name: 'TypeScript', icon: <Logo_TypeScript />, url: 'https://www.typescriptlang.org/' },

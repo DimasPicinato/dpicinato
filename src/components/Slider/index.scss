@@ -16,14 +16,17 @@
       align-items: flex-end;
 
       .Slide {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
+        padding: 0 96rem;
+        display: flex;
+        justify-items: center;
+        align-items: center;
 
         .content {
-          padding: 0 96rem;
+          grid-area: content;
           display: flex;
           flex-direction: column;
           gap: 32rem;
+          width: 100%;
 
           .marks {
             display: flex;
@@ -54,6 +57,7 @@
         }
 
         .children {
+          grid-area: children;
           justify-self: center;
           align-self: center;
           width: fit-content;
@@ -128,6 +132,56 @@
 
     .points button {
       background: $tom-claro-20;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .Slider {
+    .scroll {
+      .slidesContainer {
+        align-items: center;
+
+        .Slide {
+          padding: 0 32rem;
+          display: flex;
+
+          .content {
+            gap: 32rem;
+
+            .marks {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 16rem;
+
+              .dot {
+                display: none;
+              }
+            }
+
+            .shortcutsContainer {
+              display: flex;
+              flex-wrap: wrap;
+
+              .shortcut {
+                padding: 0;
+
+                span {
+                  display: none;
+                }
+              }
+            }
+          }
+
+          .children {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .controll {
+      padding: 0 32rem;
     }
   }
 }

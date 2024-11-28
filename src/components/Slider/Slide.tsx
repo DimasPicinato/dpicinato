@@ -1,3 +1,5 @@
+'use client'
+
 export interface SlideProps extends React.HTMLAttributes<HTMLDivElement> {
   marks: string[]
   heading: React.ReactNode
@@ -17,7 +19,7 @@ export default function Slide({ marks, heading, shortcuts, description, children
     <div className="content">
       <div className="marks">
         {marks.reduce<React.ReactNode[]>((acc, name, i) => {
-          if (i > 0) acc.push(<span key={`dot-${i}`}>•</span>)
+          if (i > 0) acc.push(<span className="dot" key={`dot-${i}`}>•</span>)
           acc.push(<span key={`mark-${i}`}>{name}</span>)
           return acc
         }, [])}

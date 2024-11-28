@@ -17,6 +17,12 @@ html {
   font-size: 1px;
 }
 
+@media (max-width: 425px) {
+  html {
+    font-size: .2352941176470588vw;
+  }
+}
+
 body {
   font-size: 16rem;
   font-family: 'Raleway Medium';
@@ -49,5 +55,19 @@ h4 {
 @media (prefers-color-scheme: dark) {
   body {
     font-family: 'Raleway';
+  }
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 32rem;
+  }
+
+  h2 {
+    font-size: 24rem;
+  }
+
+  h3 {
+    font-size: 20rem;
   }
 }

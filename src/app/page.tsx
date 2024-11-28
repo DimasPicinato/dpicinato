@@ -2,7 +2,6 @@
 
 import './page.scss'
 
-import { IoCodeSlashOutline } from 'react-icons/io5'
 import { useEffect, useRef, useState } from 'react'
 
 import Slider from '@/components/Slider'
@@ -46,7 +45,7 @@ export default function Home() {
   return <div className='HomePage'>
     <header ref={headerRef}>
       <div className="title">
-        <IoCodeSlashOutline />
+        <Logo_DP />
         <h3>Dimas Picinato</h3>
       </div>
       <nav>
