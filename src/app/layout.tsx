@@ -1,13 +1,58 @@
-import "../scss/globals.scss"
+import '@/styles/globals.css';
+import type { Metadata } from 'next';
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="pt-br">
-    <head>
-      <title>D_Picinato</title>
-      <meta name="description" content="Sou desenvolvedor full stack com foco em web, atuando remotamente desde abril de 2024 na AD Soluções em Tecnologia, onde desenvolvo sistemas web e atuo como mentor em cursos na área. Estou cursando Desenvolvimento de Sistemas na Etec de Lins, com conclusão prevista para 2025. Tenho experiência no desenvolvimento de aplicações back-end e estou me especializando em análise de requisitos e gerenciamento de projetos utilizando metodologias ágeis." />
-    </head>
-    <body>
-      {children}
-    </body>
-  </html>
+export const metadata: Metadata = {
+  title: 'Dimas Picinato',
+  description:
+    'Portfólio de Dimas Picinato, desenvolvedor full stack com experiência em desenvolvimento de aplicações web.',
+  applicationName: 'Dimas Picinato',
+  authors: [{ name: 'Dimas Picinato', url: 'https://dpicinato.com' }],
+  keywords: [
+    'Dimas Picinato',
+    'portfólio',
+    'programador',
+    'desenvolvedor',
+    'developer',
+    'full stack',
+    'front',
+    'back',
+    'Node.js',
+    'JavaScript',
+    'TypeScript',
+    'Express',
+    'NestJS',
+    'Vite',
+    'React',
+    'Next.js',
+    'projetos pessoais',
+    'sistemas',
+    'aplicações',
+    'web',
+    'prototipação',
+    'UI/UX',
+  ],
+  openGraph: {
+    type: 'website',
+    title: 'Dimas Picinato',
+    siteName: 'Dimas Picinato',
+    description:
+      'Portfólio de Dimas Picinato, desenvolvedor full stack com experiência em desenvolvimento de aplicações web.',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Dimas Picinato',
+    site: '@Dimas Picinato',
+    description:
+      'Portfólio de Dimas Picinato, desenvolvedor full stack com experiência em desenvolvimento de aplicações web.',
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="pt-br">
+      <body>{children}</body>
+    </html>
+  );
 }
