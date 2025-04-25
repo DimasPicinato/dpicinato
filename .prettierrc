@@ -7,6 +7,5 @@
   "arrowParens": "avoid",
   "objectWrap": "collapse",
   "singleAttributePerLine": true,
-  "plugins": ["prettier-plugin-tailwindcss"],
-  "endOfLine": "lf"
+  "plugins": ["prettier-plugin-tailwindcss"]
 }
