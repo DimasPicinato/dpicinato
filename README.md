@@ -13,7 +13,6 @@ O projeto utiliza as seguintes tecnologias e ferramentas no front-end, seguindo 
 - **[Zod](https://zod.dev/)** - Validação de esquemas e parsing de dados.
 - **[Tailwind CSS](https://tailwindcss.com/)** - Framework CSS para estilização eficiente.
 - **[ShadCN](https://ui.shadcn.com/)** - Componentes acessíveis e estilizados para UI.
-- **[React Icons](https://react-icons.github.io/react-icons/)** - Biblioteca de ícones para React.
 
 ## 🚀 Instalação e Configuração
 
