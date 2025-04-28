@@ -3,6 +3,7 @@ import Section from './components/section';
 import SocialMedia from './components/social-media';
 import { LogoInstagram, LogoLinkedIn } from '@/components/icons/logos';
 import { SiGithub } from 'react-icons/si';
+import Technologies from './components/technologies';
 
 export default function Home() {
   return (
@@ -55,7 +56,12 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      <Section autoSize></Section>
+      <Section
+        autoSize
+        name="Tecnologias"
+      >
+        <Technologies />
+      </Section>
       <Section
         name="Projetos"
         autoSize
