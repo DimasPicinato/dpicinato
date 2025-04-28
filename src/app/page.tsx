@@ -48,7 +48,7 @@ export default function Home() {
               url="https://www.linkedin.com/in/dimas-picinato"
             />
             <SocialMedia
-              name="@dimas_picinato"
+              name="dimas_picinato"
               logo={LogoInstagram}
               url="https://www.instagram.com/dimas_picinato/"
             />
