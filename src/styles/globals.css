@@ -161,4 +161,8 @@
   p {
     @apply text-justify;
   }
+
+  a {
+    @apply inline-flex items-center gap-1;
+  }
 }

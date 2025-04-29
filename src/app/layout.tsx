@@ -1,5 +1,6 @@
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
+import Footer from './components/footer';
 
 export const metadata: Metadata = {
   title: 'Dimas Picinato',
@@ -55,7 +56,10 @@ export default function RootLayout({
       lang="pt-br"
       className="dark"
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
