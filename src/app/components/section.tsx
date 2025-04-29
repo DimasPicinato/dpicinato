@@ -1,3 +1,4 @@
+import Separator from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
 
 export default function Section({
@@ -20,15 +21,13 @@ export default function Section({
       <div className="flex h-full w-8 flex-col items-center gap-8 *:shrink">
         {name && (
           <>
-            <div
-              className={cn('h-full w-0 border-l-2', autoSize && 'min-h-10')}
-            />
+            <Separator className={cn(autoSize && 'min-h-10')} />
             <h6 className="w-1 text-center font-mono break-all">{name}</h6>
           </>
         )}
-        <div className={cn('h-full w-0 border-l-2', autoSize && 'min-h-10')} />
+        <Separator className={cn(autoSize && 'min-h-10')} />
       </div>
-      <div className="flex justify-center">{children}</div>
+      <div className="flex h-full justify-center">{children}</div>
     </section>
   );
 }

@@ -10,6 +10,7 @@ import {
   frontTechnologies,
   techLanguages,
 } from '@/constants/technologies';
+import Separator from '@/components/ui/separator';
 
 export default function Home() {
   return (
@@ -17,9 +18,9 @@ export default function Home() {
       <hr />
 
       <Section name="Sobre - Mim">
-        <div className="flex flex-col gap-8">
-          <div className="flex w-full max-w-[1024px] items-center justify-center gap-16">
-            <div className="flex w-min flex-col gap-2">
+        <div className="flex flex-col justify-center">
+          <div className="flex w-full max-w-[1024px] items-center justify-center">
+            <div className="flex w-min flex-col gap-2 p-8">
               <h1 className="lg:w-max">Desenvolvedor Full Stack</h1>
               <p>
                 Sou desenvolvedor <b>Full Stack</b> com experiência profissional
@@ -27,7 +28,8 @@ export default function Home() {
                 desenvolvimento de sistemas <b>Back-end</b>.
               </p>
             </div>
-            <div className="flex flex-col items-center gap-4">
+            <Separator />
+            <div className="flex flex-col items-center gap-4 p-8">
               <div className="border-foreground row-span-2 flex size-32 items-center justify-center overflow-hidden rounded-full border-4">
                 <Image
                   width={256}
@@ -42,7 +44,7 @@ export default function Home() {
             </div>
           </div>
           <hr />
-          <div className="flex justify-between gap-2">
+          <div className="flex justify-between gap-2 p-4">
             <SocialMedia
               name="D-Picinato"
               logo={SiGithub}
@@ -68,10 +70,19 @@ export default function Home() {
         autoSize
         name="Linguagens"
       >
-        <StackSection
-          title="Linguagens"
-          technologyStack={techLanguages}
-        />
+        <div className="grid h-full grid-cols-[1fr_auto_1fr] items-center gap-8">
+          <div className="flex flex-col">
+            <h2>Linguagens</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+              quaerat dignissimos id quidem animi distinctio perferendis labore
+              atque officia iusto? Illum vel facere in vitae optio dignissimos
+              molestias, corrupti voluptates.
+            </p>
+          </div>
+          <Separator />
+          <StackSection technologyStack={techLanguages} />
+        </div>
       </Section>
 
       <hr />
@@ -80,10 +91,19 @@ export default function Home() {
         autoSize
         name="Front-end"
       >
-        <StackSection
-          title="Stack Front-end"
-          technologyStack={frontTechnologies}
-        />
+        <div className="grid h-full grid-cols-[1fr_auto_1fr] items-center gap-8">
+          <div className="flex flex-col">
+            <h2>Stack Front-end</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+              quaerat dignissimos id quidem animi distinctio perferendis labore
+              atque officia iusto? Illum vel facere in vitae optio dignissimos
+              molestias, corrupti voluptates.
+            </p>
+          </div>
+          <Separator />
+          <StackSection technologyStack={frontTechnologies} />
+        </div>
       </Section>
 
       <hr />
@@ -92,10 +112,19 @@ export default function Home() {
         autoSize
         name="Back-end"
       >
-        <StackSection
-          title="Stack Back-end"
-          technologyStack={backTechnologies}
-        />
+        <div className="grid h-full grid-cols-[1fr_auto_1fr] items-center gap-8">
+          <div className="flex flex-col">
+            <h2>Stack Back-end</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+              quaerat dignissimos id quidem animi distinctio perferendis labore
+              atque officia iusto? Illum vel facere in vitae optio dignissimos
+              molestias, corrupti voluptates.
+            </p>
+          </div>
+          <Separator />
+          <StackSection technologyStack={backTechnologies} />
+        </div>
       </Section>
 
       <hr />
@@ -104,10 +133,19 @@ export default function Home() {
         autoSize
         name="Banco - de - Dados"
       >
-        <StackSection
-          title="Bancos de Dados"
-          technologyStack={dbStack}
-        />
+        <div className="grid h-full grid-cols-[1fr_auto_1fr] items-center gap-8">
+          <div className="flex flex-col">
+            <h2>Banco de Dados</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+              quaerat dignissimos id quidem animi distinctio perferendis labore
+              atque officia iusto? Illum vel facere in vitae optio dignissimos
+              molestias, corrupti voluptates.
+            </p>
+          </div>
+          <Separator />
+          <StackSection technologyStack={dbStack} />
+        </div>
       </Section>
     </main>
   );
