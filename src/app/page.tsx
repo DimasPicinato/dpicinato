@@ -34,7 +34,6 @@ export default function Home() {
                 <Image
                   width={256}
                   height={256}
-                  objectFit="cover"
                   src="/img/dimas_picinato.jpg"
                   alt="Foto de Dimas Picinato"
                   className="size-full object-cover"
