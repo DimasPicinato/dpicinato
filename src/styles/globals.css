@@ -112,7 +112,7 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 leading-none;
+    @apply border-border outline-ring/50 leading-normal;
   }
 
   body {
@@ -141,32 +141,32 @@
   }
 
   h1 {
-    @apply text-3xl/normal uppercase;
+    @apply text-3xl uppercase;
   }
 
   h2 {
-    @apply text-xl/normal uppercase;
+    @apply text-xl uppercase;
   }
 
   h3 {
-    @apply text-xl/normal;
+    @apply text-xl;
   }
 
   h4 {
-    @apply text-lg/normal;
+    @apply text-lg;
   }
 
   h5 {
-    @apply text-base/normal opacity-80;
+    @apply text-base opacity-80;
   }
 
   h6 {
-    @apply text-base/normal uppercase opacity-80;
+    @apply text-base uppercase opacity-80;
   }
 
   p,
   span {
-    @apply text-base/normal;
+    @apply text-base;
   }
 
   p {
@@ -174,7 +174,7 @@
   }
 
   a {
-    @apply inline-flex items-center gap-1;
+    @apply inline-flex;
   }
 }
 

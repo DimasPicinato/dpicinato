@@ -3,17 +3,19 @@ import { cn } from '@/lib/utils';
 import Separator from '@/components/ui/separator';
 
 export default function Section({
+  id,
   name,
   children,
   autoSize,
 }: {
+  id: string;
   name?: string;
   children?: React.ReactNode;
   autoSize?: boolean;
 }) {
   return (
     <section
-      id={name}
+      id={id}
       className={cn(
         'grid w-full grid-cols-[auto_1fr] items-center pl-4 sm:pl-8',
         !autoSize && 'h-screen',

@@ -14,7 +14,7 @@ export default function SocialMedia({
       href={url}
       target="_blank"
     >
-      <Logo className="text-3xl" />
+      <Logo className="size-8" />
       <span className="px-2">{name}</span>
     </a>
   );

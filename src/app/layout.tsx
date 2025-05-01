@@ -1,7 +1,9 @@
 import '@/styles/globals.css';
+
 import type { Metadata } from 'next';
 
 import Footer from './components/footer';
+import Header from './components/header';
 
 export const metadata: Metadata = {
   title: 'Dimas Picinato',
@@ -57,7 +59,8 @@ export default function RootLayout({
       lang="pt-br"
       className="dark"
     >
-      <body>
+      <body className="pt-16">
+        <Header />
         {children}
         <Footer />
       </body>
