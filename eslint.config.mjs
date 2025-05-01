@@ -4,6 +4,7 @@ import { FlatCompat } from '@eslint/eslintrc';
 import tsParser from '@typescript-eslint/parser';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
 import prettierPlugin from 'eslint-plugin-prettier';
+import importHelpers from 'eslint-plugin-import-helpers';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -18,7 +19,13 @@ const eslintConfig = [
       parser: tsParser,
       parserOptions: { project: './tsconfig.json', tsconfigRootDir: __dirname },
     },
-    plugins: { '@typescript-eslint': tsPlugin, prettier: prettierPlugin },
+    plugins: {
+      '@typescript-eslint': tsPlugin, prettier: prettierPlugin, 'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
+      'import-helpers': importHelpers,
+    },
     rules: {
       'no-console': 'warn',
       '@typescript-eslint/no-unused-vars': [
@@ -26,6 +33,34 @@ const eslintConfig = [
         { argsIgnorePattern: '^_' },
       ],
       'prettier/prettier': 'warn',
+      'import-helpers/order-imports': [
+        'warn',
+        {
+          newlinesBetween: 'always',
+          groups: [
+            '/react/',
+            'module',
+            ['parent', 'sibling', 'index'],
+            '/assets/',
+            '/types/',
+            '/constants/',
+            '/contexts/',
+            '/hooks/',
+            '/schemas/',
+            '/libs/',
+            '/services/',
+            '/utils/',
+            '/components/@shadcn/',
+            '/components/',
+            '/shared/',
+            '/styles/',
+          ],
+          alphabetize: {
+            order: 'asc',
+            ignoreCase: true,
+          },
+        },
+      ],
     },
   },
   ...compat.extends('prettier'),

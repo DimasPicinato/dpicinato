@@ -7,24 +7,24 @@ export default function Footer() {
 
   return (
     <footer className="flex flex-col items-center gap-8 border-t-2 bg-black p-8 text-white">
-      <div className="flex flex-wrap justify-center gap-16">
-        <section className="flex flex-col gap-4">
+      <div className="flex w-min flex-wrap justify-center gap-16 sm:w-fit">
+        <section className="flex w-full flex-col gap-4 sm:w-fit">
           <h4>Contato</h4>
           <div className="grid grid-cols-[auto_auto] gap-2">
             <span className="flex items-center gap-1">
               <HiOutlineMailOpen />
               E-mail:
             </span>
-            <span>contato@dpicinato.com</span>
+            <span className="w-max">contato@dpicinato.com</span>
 
             <span className="flex items-center gap-1">
               <HiOutlinePhone />
               Telefone:
             </span>
-            <span>14 99838-8371</span>
+            <span className="w-max">14 99838-8371</span>
           </div>
         </section>
-        <section className="flex flex-col gap-4">
+        <section className="flex w-full flex-col gap-4 sm:w-fit">
           <h4>Redes Sociais</h4>
           <div className="grid grid-cols-[auto_auto] gap-2">
             <span className="flex items-center gap-1">
@@ -34,6 +34,7 @@ export default function Footer() {
             <a
               href="https://www.instagram.com/dimas_picinato/"
               target="_blank"
+              className="w-max"
             >
               dimas_picinato
             </a>
@@ -45,6 +46,7 @@ export default function Footer() {
             <a
               href="https://www.linkedin.com/in/dimas-picinato"
               target="_blank"
+              className="w-max"
             >
               dimas-picinato
             </a>
@@ -56,18 +58,20 @@ export default function Footer() {
             <a
               href="https://github.com/D-Picinato"
               target="_blank"
+              className="w-max"
             >
               D-Picinato
             </a>
           </div>
         </section>
-        <section className="flex flex-col gap-4">
+        <section className="flex w-full flex-col gap-4 sm:w-fit">
           <h4>Projetos</h4>
           <div className="grid grid-cols-[auto_auto] gap-2">
             <span className="flex items-center gap-1">Studium:</span>
             <a
               href="https://beta-studium.dpicinato.com"
               target="_blank"
+              className="w-max"
             >
               beta-studium.dpicinato.com
             </a>
@@ -76,6 +80,7 @@ export default function Footer() {
             <a
               href="https://kanbanager.dpicinato.com"
               target="_blank"
+              className="w-max"
             >
               kanbanager.dpicinato.com
             </a>

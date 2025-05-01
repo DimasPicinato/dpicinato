@@ -1,15 +1,13 @@
+import { SiGithub } from 'react-icons/si';
+
 import Image from 'next/image';
+
+import { stacks } from '@/constants/technologies';
+
 import Section from './components/section';
 import SocialMedia from './components/social-media';
-import { LogoInstagram, LogoLinkedIn } from '@/components/icons/logos';
-import { SiGithub } from 'react-icons/si';
 import StackSection from './components/stack-section';
-import {
-  backTechnologies,
-  dbStack,
-  frontTechnologies,
-  techLanguages,
-} from '@/constants/technologies';
+import { LogoInstagram, LogoLinkedIn } from '@/components/icons/logos';
 import Separator from '@/components/ui/separator';
 
 export default function Home() {
@@ -69,18 +67,19 @@ export default function Home() {
         autoSize
         name="Linguagens"
       >
-        <div className="grid h-full grid-cols-[1fr_auto_1fr] items-center gap-8">
+        <div className="grid h-full grid-cols-1 items-center gap-8 sm:grid-cols-[1fr_auto_1fr]">
           <div className="flex flex-col">
             <h2>Linguagens</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              quaerat dignissimos id quidem animi distinctio perferendis labore
-              atque officia iusto? Illum vel facere in vitae optio dignissimos
-              molestias, corrupti voluptates.
+              Tenho domínio das principais linguagens utilizadas no
+              desenvolvimento web, com foco em <b>JavaScript</b> e{' '}
+              <b>TypeScript</b>. JavaScript é essencial para aplicações
+              interativas no navegador, enquanto TypeScript oferece tipagem
+              estática e melhora a escalabilidade dos projetos.
             </p>
           </div>
-          <Separator />
-          <StackSection technologyStack={techLanguages} />
+          <Separator isHorizontalOnMobile />
+          <StackSection technologyStack={stacks.languages} />
         </div>
       </Section>
 
@@ -90,18 +89,19 @@ export default function Home() {
         autoSize
         name="Front-end"
       >
-        <div className="grid h-full grid-cols-[1fr_auto_1fr] items-center gap-8">
+        <div className="grid h-full grid-cols-1 items-center gap-8 sm:grid-cols-[1fr_auto_1fr]">
           <div className="flex flex-col">
             <h2>Stack Front-end</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              quaerat dignissimos id quidem animi distinctio perferendis labore
-              atque officia iusto? Illum vel facere in vitae optio dignissimos
-              molestias, corrupti voluptates.
+              Atuo no desenvolvimento <b>Front-end</b> com foco em performance,
+              usabilidade e responsividade. Utilizo tecnologias modernas como{' '}
+              <b>React</b>, <b>TypeScript</b> e <b>Tailwind CSS</b> para criar
+              interfaces elegantes, funcionais e acessíveis, sempre alinhadas a
+              um bom design system.
             </p>
           </div>
-          <Separator />
-          <StackSection technologyStack={frontTechnologies} />
+          <Separator isHorizontalOnMobile />
+          <StackSection technologyStack={stacks.frontend} />
         </div>
       </Section>
 
@@ -111,18 +111,19 @@ export default function Home() {
         autoSize
         name="Back-end"
       >
-        <div className="grid h-full grid-cols-[1fr_auto_1fr] items-center gap-8">
+        <div className="grid h-full grid-cols-1 items-center gap-8 sm:grid-cols-[1fr_auto_1fr]">
           <div className="flex flex-col">
             <h2>Stack Back-end</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              quaerat dignissimos id quidem animi distinctio perferendis labore
-              atque officia iusto? Illum vel facere in vitae optio dignissimos
-              molestias, corrupti voluptates.
+              Possuo sólida experiência no desenvolvimento de sistemas{' '}
+              <b>Back-end</b>, com foco em desempenho, escalabilidade e
+              organização do código. Utilizo frameworks modernos e arquiteturas
+              bem definidas para criar APIs eficientes, seguras e de fácil
+              manutenção.
             </p>
           </div>
-          <Separator />
-          <StackSection technologyStack={backTechnologies} />
+          <Separator isHorizontalOnMobile />
+          <StackSection technologyStack={stacks.backend} />
         </div>
       </Section>
 
@@ -132,18 +133,19 @@ export default function Home() {
         autoSize
         name="Banco - de - Dados"
       >
-        <div className="grid h-full grid-cols-[1fr_auto_1fr] items-center gap-8">
+        <div className="grid h-full grid-cols-1 items-center gap-8 sm:grid-cols-[1fr_auto_1fr]">
           <div className="flex flex-col">
             <h2>Banco de Dados</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              quaerat dignissimos id quidem animi distinctio perferendis labore
-              atque officia iusto? Illum vel facere in vitae optio dignissimos
-              molestias, corrupti voluptates.
+              Tenho domínio em bancos de dados <b>relacionais</b> e{' '}
+              <b>não relacionais</b>, aplicando modelagem adequada conforme a
+              necessidade de cada projeto. Priorizo o uso de boas práticas como
+              normalização, uso de índices e otimização de consultas para
+              garantir performance e integridade dos dados.
             </p>
           </div>
-          <Separator />
-          <StackSection technologyStack={dbStack} />
+          <Separator isHorizontalOnMobile />
+          <StackSection technologyStack={stacks.db} />
         </div>
       </Section>
     </main>

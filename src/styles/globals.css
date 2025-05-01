@@ -114,8 +114,15 @@
   * {
     @apply border-border outline-ring/50 leading-none duration-75;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  @media (max-width: 500px) {
+    html {
+      font-size: calc(100vw / 500 * 16);
+    }
   }
 
   hr {
@@ -129,28 +136,32 @@
   h1,
   h2,
   h3,
-  h4,
-  h5 {
+  h4 {
     @apply font-bold;
   }
 
   h1 {
     @apply text-3xl/normal uppercase;
   }
+
   h2 {
     @apply text-xl/normal uppercase;
   }
+
   h3 {
     @apply text-xl/normal;
   }
+
   h4 {
     @apply text-lg/normal;
   }
+
   h5 {
-    @apply text-base/normal;
+    @apply text-base/normal opacity-80;
   }
+
   h6 {
-    @apply text-base/normal uppercase opacity-85;
+    @apply text-base/normal uppercase opacity-80;
   }
 
   p,
@@ -164,5 +175,11 @@
 
   a {
     @apply inline-flex items-center gap-1;
+  }
+}
+
+@layer utilities {
+  .gradient-section-black {
+    @apply bg-linear-to-r from-background to-black;
   }
 }
