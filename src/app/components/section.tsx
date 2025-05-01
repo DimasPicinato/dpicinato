@@ -15,11 +15,11 @@ export default function Section({
     <section
       id={name}
       className={cn(
-        'grid w-full grid-cols-[auto_1fr] items-center pl-8',
+        'grid w-full grid-cols-[auto_1fr] items-center pl-4 sm:pl-8',
         !autoSize && 'h-screen',
       )}
     >
-      <div className="flex h-full w-8 flex-col items-center gap-2 *:shrink">
+      <div className="hidden h-full w-4 flex-col items-center gap-2 *:shrink sm:flex sm:w-8">
         {name && (
           <>
             <Separator className={cn(autoSize && 'min-h-10')} />
@@ -28,7 +28,7 @@ export default function Section({
         )}
         <Separator className={cn(autoSize && 'min-h-10')} />
       </div>
-      <div className="flex h-full justify-center p-8">{children}</div>
+      <div className="flex h-full justify-center p-4 sm:p-8">{children}</div>
     </section>
   );
 }
