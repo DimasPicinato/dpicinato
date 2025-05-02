@@ -2,27 +2,12 @@ import { HiOutlineMailOpen } from 'react-icons/hi';
 import { HiOutlinePhone } from 'react-icons/hi2';
 import { SiGithub, SiInstagram, SiLinkedin } from 'react-icons/si';
 
-import Link from 'next/link';
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="flex flex-col items-center gap-8 border-t-2 bg-black p-8 text-white">
       <div className="flex w-min flex-wrap justify-center gap-16 sm:w-fit">
-        <section className="flex w-full flex-col gap-4 sm:w-fit">
-          <h4>Links</h4>
-          <ol>
-            <li>
-              <Link href="/#sobremim">Sobre Mim</Link>
-              <ol>
-                <li>
-                  <Link href="/#sobremim">Sobre Mim</Link>
-                </li>
-              </ol>
-            </li>
-          </ol>
-        </section>
         <section className="flex w-full flex-col gap-4 sm:w-fit">
           <h4>Contato</h4>
           <div className="grid grid-cols-[auto_auto] gap-2">
