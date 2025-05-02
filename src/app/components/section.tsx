@@ -17,7 +17,7 @@ export default function Section({
     <section
       id={id}
       className={cn(
-        'grid w-full grid-cols-[auto_1fr] items-center pl-4 sm:pl-8',
+        'grid w-full grid-cols-[auto_1fr] items-center sm:pl-8',
         !autoSize && 'h-screen',
       )}
     >
