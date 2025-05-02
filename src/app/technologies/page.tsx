@@ -78,7 +78,7 @@ export default function TechnologyPage() {
 
       <Section
         autoSize
-        id="databases"
+        id="database"
         name="Banco - de - Dados"
       >
         <div className="grid h-full grid-cols-1 items-center gap-8 sm:grid-cols-[1fr_auto_1fr]">
