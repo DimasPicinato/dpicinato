@@ -23,13 +23,13 @@ const styles: Record<string, string> = {
 export default function Header() {
   return (
     <header
-      className="bg-background/80 fixed top-0 left-0 h-16 w-full border-b-2 px-4 backdrop-blur-sm"
+      className="bg-background w-full border-b-2 p-4"
       style={{ zIndex: 9999999 }}
     >
       <NavigationMenu className="flex h-full items-center">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Navegação</NavigationMenuTrigger>
+            <NavigationMenuTrigger>Início</NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className={styles.content}>
                 <NavigationMenuLink

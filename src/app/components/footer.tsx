@@ -12,11 +12,16 @@ export default function Footer() {
       <div className="flex w-min flex-wrap justify-center gap-16 sm:w-fit">
         <section className="flex w-full flex-col gap-4 sm:w-fit">
           <h4>Links</h4>
-          <ul>
+          <ol>
             <li>
               <Link href="/#sobremim">Sobre Mim</Link>
+              <ol>
+                <li>
+                  <Link href="/#sobremim">Sobre Mim</Link>
+                </li>
+              </ol>
             </li>
-          </ul>
+          </ol>
         </section>
         <section className="flex w-full flex-col gap-4 sm:w-fit">
           <h4>Contato</h4>

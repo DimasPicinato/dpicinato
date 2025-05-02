@@ -1,6 +1,6 @@
 import '@/styles/globals.css';
 
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 
 import Footer from './components/footer';
 import Header from './components/header';
@@ -51,6 +51,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = { colorScheme: 'dark' };
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -59,10 +61,15 @@ export default function RootLayout({
       lang="pt-br"
       className="dark"
     >
-      <body className="pt-16">
+      <body className="grid h-screen grid-rows-[auto_1fr] overflow-hidden">
         <Header />
-        {children}
-        <Footer />
+        <div
+          aria-label="page-content"
+          className="overflow-auto"
+        >
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
