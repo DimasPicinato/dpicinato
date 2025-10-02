@@ -1,80 +1,73 @@
-# Studium Front-end
+# React + TypeScript + Vite
 
-Este é o repositório do front-end do Studium, uma plataforma para estudantes que auxilia na gestão e organização dos estudos.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 📦 Tecnologias Utilizadas
+Currently, two official plugins are available:
 
-O projeto utiliza as seguintes tecnologias e ferramentas no front-end, seguindo o padrão de arquitetura MVVM:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- **[TypeScript](https://www.typescriptlang.org/)** - Superset do JavaScript para tipagem estática.
-- **[Next.js](https://nextjs.org/)** - Framework React para desenvolvimento web moderno.
-- **[TanStack Query](https://tanstack.com/query/latest)** - Gerenciamento de estado assíncrono e caching de dados.
-- **[Zustand](https://zustand-demo.pmnd.rs/)** - Gerenciamento de estado global minimalista.
-- **[Zod](https://zod.dev/)** - Validação de esquemas e parsing de dados.
-- **[Tailwind CSS](https://tailwindcss.com/)** - Framework CSS para estilização eficiente.
-- **[ShadCN](https://ui.shadcn.com/)** - Componentes acessíveis e estilizados para UI.
+## React Compiler
 
-## 🚀 Instalação e Configuração
+The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
 
-### 🔧 Pré-requisitos
+## Expanding the ESLint configuration
 
-Certifique-se de ter instalado:
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-- **[Node.js](https://nodejs.org/)** (versão recomendada: LTS)
-- **[pnpm](https://pnpm.io/)** (gerenciador de pacotes utilizado no projeto)
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-### 📥 Instalação
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-1. Clone o repositório:
-   ```sh
-   git clone https://github.com/dimas-picinato/studium-frontend.git
-   ```
-2. Acesse o diretório do projeto:
-   ```sh
-   cd studium-frontend
-   ```
-3. Instale as dependências:
-   ```sh
-   pnpm install
-   ```
-
-### 🌎 Configuração de Variáveis de Ambiente
-
-Crie um arquivo `.env.local` na raiz do projeto e configure as variáveis de ambiente:
-
-```env
-NEXT_PUBLIC_API_URL=""
-NEXT_PUBLIC_ENVIRONMENT="development" # Opções: development, staging, beta, production
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
 
-> ⚠️ **Importante**: Nunca compartilhe suas credenciais em repositórios públicos.
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-## ▶️ Execução
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-### 🔥 Desenvolvimento
-
-Para rodar o ambiente de desenvolvimento, utilize:
-
-```sh
-pnpm dev
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-
-O servidor será iniciado em `http://localhost:{PORT}` com a porta configurada nas variáveis de ambiente.
-
-### 📦 Build para Produção
-
-Para gerar a versão otimizada para produção, execute:
-
-```sh
-pnpm build
-```
-
-Para iniciar o servidor após o build:
-
-```sh
-pnpm start
-```
-
----
-
-Desenvolvido por [Dimas Picinato](https://github.com/D-Picinato). Todos os direitos reservados.
