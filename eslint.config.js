@@ -25,7 +25,8 @@ export default defineConfig([
       'import-helpers': importHelpers,
     },
     rules: {
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+      'react-refresh/only-export-components': 'off',
+      'react-hooks/exhaustive-deps': 'off',
       'import-helpers/order-imports': [
         'warn',
         {

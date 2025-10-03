@@ -19,6 +19,11 @@ import {
 import { SiLinkedin } from 'react-icons/si';
 import { Link, Outlet } from 'react-router-dom';
 
+import IcoAMSDSEtecDeLins from '@/assets/icos/education/ams-ds-etec-de-lins.ico';
+import IcoADSolucoesEmTecnologia from '@/assets/icos/experience/adsolucoesemtecnologia.png';
+import IcoKanbanager from '@/assets/icos/projects/kanbanager.ico';
+import IcoStudium from '@/assets/icos/projects/studium.ico';
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -31,12 +36,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 
 import { useTheme } from '@/hooks/theme.hook';
 
-export function PublicLayout() {
+export function AppLayout() {
   const { themeMode, setThemeMode } = useTheme();
 
   return (
     <div className="flex min-h-[100dvh] flex-col">
-      <header className="flex items-center justify-between gap-4 border-b p-4">
+      <header className="z-50 flex items-center justify-between gap-4 border-b p-4">
         <div className="flex items-center gap-4">
           <Link to="/">
             <h2>Dimas Picinato</h2>
@@ -61,7 +66,7 @@ export function PublicLayout() {
                     <Link to="/projects/studium">
                       <div className="flex w-max items-center gap-2">
                         <img
-                          src="https://studium.dpicinato.com/favicon.ico"
+                          src={IcoStudium}
                           alt="Logo do Studium"
                           className="size-4"
                         />
@@ -73,7 +78,7 @@ export function PublicLayout() {
                     <Link to="/projects/kanbanager">
                       <div className="flex w-max items-center gap-2">
                         <img
-                          src="https://kanbanager.dpicinato.com/favicon.ico"
+                          src={IcoKanbanager}
                           alt="Logo do Kanbanager"
                           className="size-4"
                         />
@@ -81,7 +86,7 @@ export function PublicLayout() {
                       </div>
                     </Link>
                   </NavigationMenuLink>
-                  <NavigationMenuLink asChild>
+                  {/* <NavigationMenuLink asChild>
                     <Link to="/projects/cvasg">
                       <div className="flex w-max items-center gap-2">
                         <img
@@ -116,7 +121,7 @@ export function PublicLayout() {
                         To Do List
                       </div>
                     </Link>
-                  </NavigationMenuLink>
+                  </NavigationMenuLink> */}
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
@@ -142,20 +147,20 @@ export function PublicLayout() {
                   </NavigationMenuLink>
                   <NavigationMenuLink>
                     <Link
-                      to="/technologies/backend"
-                      className="flex w-full min-w-max items-center gap-2"
-                    >
-                      <Server />
-                      Back-end
-                    </Link>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink>
-                    <Link
                       to="/technologies/frontend"
                       className="flex w-full min-w-max items-center gap-2"
                     >
                       <MonitorSmartphone />
                       Front-end
+                    </Link>
+                  </NavigationMenuLink>
+                  <NavigationMenuLink>
+                    <Link
+                      to="/technologies/backend"
+                      className="flex w-full min-w-max items-center gap-2"
+                    >
+                      <Server />
+                      Back-end
                     </Link>
                   </NavigationMenuLink>
                   <NavigationMenuLink>
@@ -194,7 +199,7 @@ export function PublicLayout() {
                     <Link to="/experience/adsolucoesemtecnologia">
                       <div className="flex w-max items-center gap-2">
                         <img
-                          src="https://adsolucoestecnologia.com.br/assets/img/favicon.png"
+                          src={IcoADSolucoesEmTecnologia}
                           alt="Logo da AD Soluções em Tecnologia"
                           className="size-4 dark:brightness-[100]"
                         />
@@ -220,7 +225,7 @@ export function PublicLayout() {
                     <Link to="/education/ams-etec-lins">
                       <div className="flex w-max items-center gap-2">
                         <img
-                          src="https://www.cps.sp.gov.br/favicon.ico"
+                          src={IcoAMSDSEtecDeLins}
                           alt="Logo do Centro Paula Souza"
                           className="size-4"
                         />
